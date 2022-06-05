@@ -20,8 +20,7 @@ def is_bot_admin(func: Callable) -> Callable:
                 missing_permissions = []
                 if current_chat.permissions:
                     required_permissions = [
-                        "can_send_messages",
-                        "can_send_media_messages",
+                        
                     ]
                     missing_permissions = list(
                         filter(
@@ -35,10 +34,7 @@ def is_bot_admin(func: Callable) -> Callable:
                         client, current_chat.id, config.get("BOT_ID")
                     )
                     required_permissions = [
-                        "can_delete_messages",
-                        "can_manage_voice_chats",
-                        "can_promote_members",
-                        "can_invite_users",
+                        
                     ]
                     missing_permissions = list(
                         filter(
